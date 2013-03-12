@@ -14,7 +14,7 @@ public class ArithmeticOperations {
 		return x * y;
 	}
 	
-	public int divide(int x, int y){
+	public int divide(int x, int y) throws ArithmeticException{
 		return x / y;
 	}
 }
