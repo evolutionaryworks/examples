@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 public class ArithmeticOperationsV2Test {
 
 	ArithmeticOperations operation;
-	int x;
-	int y;
-	int result;
+	private int x;
+	private int y;
+	private int result;
 	
 	@BeforeTest
 	public void setup(){

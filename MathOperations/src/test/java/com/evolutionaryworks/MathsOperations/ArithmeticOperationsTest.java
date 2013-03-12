@@ -8,9 +8,9 @@ public class ArithmeticOperationsTest {
 	
 	
 	ArithmeticOperations operation;
-	int x;
-	int y;
-	int result;
+	private int x;
+	private int y;
+	private int result;
 	
 	@BeforeTest
 	public void setup(){
