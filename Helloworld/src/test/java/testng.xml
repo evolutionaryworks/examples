@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="HelloWorldTest" verbose="1" parallel="false">
+  <test name="Basic Test" >
+    <classes>
+      <class name="com.evolutionaryworks.HelloWorld.HelloWorldTestV1" />
+      <methods>
+      	<include name="getMessage"></include>
+      	<include name="setMessage"></include>
+      </methods>
+    </classes>
+  </test>
+</suite>
