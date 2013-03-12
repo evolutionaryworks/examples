@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="5" name="Failed suite [Arithmetic Suite]">
+  <test name="MathTests(failed)">
+    <classes>
+      <class name="com.evolutionaryworks.MathsOperations.ArithmeticOperationsTest">
+        <methods>
+          <include name="setup"/>
+          <include name="multiply"/>
+          <include name="sum"/>
+          <include name="divide"/>
+          <include name="subtract"/>
+        </methods>
+      </class> <!-- com.evolutionaryworks.MathsOperations.ArithmeticOperationsTest -->
+    </classes>
+  </test> <!-- MathTests(failed) -->
+</suite> <!-- Failed suite [Arithmetic Suite] -->
