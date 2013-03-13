@@ -24,7 +24,7 @@ public class ArithmeticOperationsTest {
 		System.out.println("In before test");
 	}
 
-	@Test(groups = {"Smoke", "Regression"})
+	@Test(groups = {"Regression"})
 	public void divide() {
 		result = operation.divide(x, y); 
 		Assert.assertEquals(result, 2);
@@ -33,7 +33,7 @@ public class ArithmeticOperationsTest {
 	@Test(groups = {"Smoke", "Regression"})
 	public void multiply() {
 		result = operation.multiply(x, y);
-		Assert.assertEquals(result, 8);
+		Assert.assertEquals(result, 7);
 	}
 
 	@Test(groups = {"Smoke", "Regression"})
@@ -42,7 +42,7 @@ public class ArithmeticOperationsTest {
 		Assert.assertEquals(result, 2);
 	}
 	
-	@Test(groups = {"Regression"})
+	@Test(groups = {"Regression"}, dependsOnMethods = {"subtract"}, dependsOnGroups = {"Smoke"})
 	public void subtractGetNegative() {
 		int x1 = 2;
 		int y1 = 4;

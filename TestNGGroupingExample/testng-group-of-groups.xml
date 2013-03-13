@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="Arithmetic Suite" verbose="2">
+	<test name="MathV2Test">
+		<groups>
+			<define name="ComplexSmoke">
+				<include name="Smoke"></include>
+				<include name="Complex"></include>
+			</define>
+			<run>
+				<include name="ComplexSmoke"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.evolutionaryworks.MathsOperations.ArithmeticOperationsTest"></class>
+			<class name="com.evolutionaryworks.MathsOperations.ComplexOperationsTest"></class>
+		</classes>
+	</test>
+</suite>
