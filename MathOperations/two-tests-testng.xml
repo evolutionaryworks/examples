@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="Arithmetic Suite">
+	<test name="MathTests">
+		<classes>
+			<class name="com.evolutionaryworks.MathsOperations.ArithmeticOperationsV2Test" />
+		</classes>
+	</test>
+	<test name="MathV2Test">
+		<classes>
+			<class name="com.evolutionaryworks.MathsOperations.ArithmeticOperationsTest" />
+		</classes>
+	</test>
+</suite>

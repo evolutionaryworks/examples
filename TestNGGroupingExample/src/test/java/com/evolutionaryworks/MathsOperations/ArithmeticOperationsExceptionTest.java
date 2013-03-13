@@ -1,5 +1,6 @@
 package com.evolutionaryworks.MathsOperations;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -10,7 +11,7 @@ public class ArithmeticOperationsExceptionTest {
 	int y;
 	int result;
 	
-	@BeforeTest
+	@BeforeTest(groups={"Regression"})
 	public void setup(){
 		operation = new ArithmeticOperations();
 		x = 4;
@@ -18,7 +19,7 @@ public class ArithmeticOperationsExceptionTest {
 		System.out.println("In before test");
 	}
 
-	@Test(expectedExceptions = ArithmeticException.class)
+	@Test(expectedExceptions = ArithmeticException.class, groups = {"Regression"})
 	public void divide() {
 		result = operation.divide(x, y); 
 	}
