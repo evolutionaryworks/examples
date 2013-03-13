@@ -11,7 +11,7 @@ public class ArithmeticOperationsExceptionTest {
 	int y;
 	int result;
 	
-	@BeforeTest(groups={"Regression"})
+	@BeforeTest(groups={"Exception"})
 	public void setup(){
 		operation = new ArithmeticOperations();
 		x = 4;
@@ -19,7 +19,7 @@ public class ArithmeticOperationsExceptionTest {
 		System.out.println("In before test");
 	}
 
-	@Test(expectedExceptions = ArithmeticException.class, groups = {"Regression"})
+	@Test(expectedExceptions = ArithmeticException.class, groups = {"Exception"})
 	public void divide() {
 		result = operation.divide(x, y); 
 	}

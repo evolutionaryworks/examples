@@ -39,7 +39,7 @@ public class ArithmeticOperationsTest {
 	@Test(groups = {"Smoke", "Regression"})
 	public void subtract() {
 		result = operation.subtract(x, y);
-		Assert.assertEquals(result, 3);
+		Assert.assertEquals(result, 2);
 	}
 	
 	@Test(groups = {"Regression"}, dependsOnMethods = {"subtract"}, dependsOnGroups = {"Smoke"})

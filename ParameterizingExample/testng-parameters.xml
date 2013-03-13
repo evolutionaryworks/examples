@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="Arithmetic Suite">
+	<test name="MathV2Test">
+	<parameter name="x" value="2"></parameter>
+	<parameter name="y" value="2"></parameter>
+	<parameter name="expected" value="0"></parameter>
+		<classes>
+			<class name="com.evolutionaryworks.MathsOperations.ArithmeticOperationsV2Test" />
+		</classes>
+	</test>
+</suite>
