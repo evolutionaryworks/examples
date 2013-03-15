@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 
 
-public class GoogleCurrencyApiTest {
+public class GoogleCurrencyApiTestWithStubs {
 	
 	GoogleCurrencyApi googleApi;
 	HttpResponse httpResponse;
@@ -32,11 +32,6 @@ public class GoogleCurrencyApiTest {
 		String mimeType = type.getMimeType();
 		System.out.println(mimeType);
 		Assert.assertEquals(mimeType, jsonMimeType);
-	}
-	
-	@Test(enabled = false)
-	public void testPayload(){
-		//This is done as part of CurrencyConverterTest
 	}
 
 }
