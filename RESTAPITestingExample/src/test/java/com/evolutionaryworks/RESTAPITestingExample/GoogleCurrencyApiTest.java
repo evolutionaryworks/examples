@@ -1,42 +1,49 @@
 package com.evolutionaryworks.RESTAPITestingExample;
 
+import com.evolutionaryworks.RESTAPITestingExample.api.Currency;
+import com.evolutionaryworks.RESTAPITestingExample.api.GoogleCurrencyApi;
+import com.evolutionaryworks.RESTAPITestingExample.model.GoogleCurrencyApiResponse;
+import com.evolutionaryworks.RESTAPITestingExample.util.ResponseBuilder;
 import org.apache.http.HttpResponse;
 import org.apache.http.entity.ContentType;
-import org.testng.annotations.Test;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 
 public class GoogleCurrencyApiTest {
 	
-	GoogleCurrencyApi googleApi;
-	HttpResponse httpResponse;
-	
-	@BeforeTest
-	//Is it ok for setup to throw exceptions? Can move this to test method
+	private HttpResponse httpResponse;
+    private GoogleCurrencyApi currencyApi;
+
+    @BeforeClass
 	public void setup(){
-		googleApi = new GoogleCurrencyApi();
-		httpResponse = googleApi.apiResponse();
+        currencyApi = new GoogleCurrencyApi("http://www.google.com/ig/calculator?hl=en");
+        httpResponse = currencyApi.convert(Currency.USD, Currency.INR);
 	}
 
 	@Test
 	public void testResponseCode(){
-		int statusCode = httpResponse.getStatusLine().getStatusCode();
-		Assert.assertEquals( statusCode, 200 );
+		int expectedStatusCode = httpResponse.getStatusLine().getStatusCode();
+		Assert.assertEquals(expectedStatusCode, 200,"Status Code");
 	}
 	
-	@Test
+	@Test(dependsOnMethods = {"testResponseCode"})
 	public void testMimeCode(){
-		String jsonMimeType = "text/html";
+		String expectedContentType = "text/html";
+        // Get Observed Mime Type
 		ContentType type  = ContentType.getOrDefault(httpResponse.getEntity());
 		String mimeType = type.getMimeType();
-		System.out.println(mimeType);
-		Assert.assertEquals(mimeType, jsonMimeType);
+        // Assert
+		Assert.assertEquals(mimeType, expectedContentType);
 	}
-	
-	@Test(enabled = false)
-	public void testPayload(){
-		//This is done as part of CurrencyConverterTest
-	}
+
+    @Test(dependsOnMethods = {"testMimeCode"})
+   	public void testDollarToRupee() throws IOException {
+        GoogleCurrencyApiResponse googleResponse = ResponseBuilder.buildResponse(httpResponse.getEntity().getContent());
+        Assert.assertEquals(googleResponse.getRhsValueAsInt(), 54);
+   	}
 
 }
