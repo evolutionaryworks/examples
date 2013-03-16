@@ -1,4 +1,4 @@
-package com.evolutionaryworks.MathsOperations;
+package com.evolutionaryworks.mathsoperations;
 
 public class ArithmeticOperations {
 	

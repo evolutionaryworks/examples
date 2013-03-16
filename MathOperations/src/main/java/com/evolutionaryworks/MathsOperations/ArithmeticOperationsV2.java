@@ -1,6 +1,6 @@
-package com.evolutionaryworks.MathsOperations;
+package com.evolutionaryworks.mathsoperations;
 
-public class AithmeticOperationsV2 extends ArithmeticOperations {
+public class ArithmeticOperationsV2 extends ArithmeticOperations {
 	
 	@Override
 	public int subtract(int x, int y){
@@ -19,4 +19,5 @@ public class AithmeticOperationsV2 extends ArithmeticOperations {
 		}
 		return sum;
 	}
+	
 }

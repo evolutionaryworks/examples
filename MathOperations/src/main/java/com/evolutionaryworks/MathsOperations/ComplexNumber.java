@@ -1,4 +1,4 @@
-package com.evolutionaryworks.MathsOperations;
+package com.evolutionaryworks.mathsoperations;
 
 class ComplexNumber{
 	private int x; 

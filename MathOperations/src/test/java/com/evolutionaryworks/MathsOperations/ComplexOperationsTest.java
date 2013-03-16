@@ -1,8 +1,11 @@
-package com.evolutionaryworks.MathsOperations;
+package com.evolutionaryworks.mathsoperations;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import com.evolutionaryworks.mathsoperations.ComplexNumber;
+import com.evolutionaryworks.mathsoperations.ComplexOperations;
 
 public class ComplexOperationsTest {
 

@@ -1,8 +1,12 @@
-package com.evolutionaryworks.MathsOperations;
+package com.evolutionaryworks.mathsoperations;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import com.evolutionaryworks.mathsoperations.ArithmeticOperations;
 
 public class ArithmeticOperationsTest {
 	
@@ -12,12 +16,17 @@ public class ArithmeticOperationsTest {
 	private int y;
 	private int result;
 	
-	@BeforeTest
+	@BeforeClass
 	public void setup(){
 		operation = new ArithmeticOperations();
 		x = 4;
 		y = 2;
-		System.out.println("In before test");
+		System.out.println("In before class");
+	}
+	
+	@BeforeMethod
+	public void beforeMethod(){
+		System.out.println("In before method");
 	}
 
 	@Test

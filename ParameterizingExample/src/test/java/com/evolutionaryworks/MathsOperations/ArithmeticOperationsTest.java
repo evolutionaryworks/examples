@@ -19,7 +19,7 @@ public class ArithmeticOperationsTest {
 	public Object[][] dp() {
 	  return new Object[][] {
 	    new Object[] {2, 3, 5}, 
-	    new Object[] {4, 5, 9}, 
+	    new Object[] {-4, 5, 1}, 
 	  };
 	}
 

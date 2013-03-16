@@ -1,7 +1,9 @@
-package com.evolutionaryworks.MathsOperations;
+package com.evolutionaryworks.mathsoperations;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import com.evolutionaryworks.mathsoperations.ArithmeticOperations;
 
 public class ArithmeticOperationsExceptionTest {
 	

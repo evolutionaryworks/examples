@@ -48,7 +48,7 @@ public class GoogleCurrencyApi {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+		System.out.println(jsonResponse);
 		return jsonResponse;
 	}
 	

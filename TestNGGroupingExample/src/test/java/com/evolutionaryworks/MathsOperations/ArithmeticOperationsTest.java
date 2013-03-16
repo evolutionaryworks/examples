@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class ArithmeticOperationsTest {
 	
 	
-	ArithmeticOperations operation;
+	private ArithmeticOperations operation;
 	private int x;
 	private int y;
 	private int result;
